@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate-Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/candidate-profile.css">
+    <link rel="stylesheet" href="../CSS/create-profile.css">
+</head>
+<body>
+    <!--Navbar-->
+    <section>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark p-3 shadow">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="" class="navbar-brand">H</a>
+                
+                <div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">STAPH</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link inactive" aria-current="page" href="./Customer-Dashboard.html">Jobs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link inactive" aria-current="page" href="#">Applications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link inactive" aria-current="page" href="./Calender.html">Celender</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link inactive" aria-current="page" href="./Mails.html">Mails</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./Candidate-Profile.html">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link inactive" aria-current="page" href="#" id="signOut">Sign out</a>
+                            </li>        
+                        </ul>                                    
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <main>
+
+        <section>
+            <div class="container mt-3 p-3">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-2">
+                        <span class="Profile-Pic">H</span>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4">
+                        <header><h3 id="nameValue"></h3></header>
+                        <p id="emailValue"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <!--General Info-->
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="text-start">General Information</h5>
+                            </div>
+                            <div class="col-5">
+                                <h6 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#GeneralInformation">Edit</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6 text-end">
+                                <span class="info">Phone Number</span><br>
+                                <span class="info">Location</span><br>
+                                <span class="info">Primary role</span><br>
+                                <span class="info">Roles open to</span><br>
+                                <span class="info">Bio</span><br>
+                            </div>
+                            <div class="col-6">
+                                <span id="phoneValue"></span><br>
+                                <span id="locationValue"></span><br>
+                                <span id="primaryRoleValue"></span><br>
+                                <span id="rolesOpenToValue"></span><br>
+                                <span id="bioValue"></span><br>
+                            </div>
+                        </div>
+
+                        <!--Skills-->
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <h5 class="text-start">Skills</h5>
+                            </div>
+                            <div class="col-5">
+                                <h6 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Skills">Edit</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6 text-end">
+                                <span class="info">Skill#1</span><br>
+                                <span class="info">Skill#2</span><br>
+                                <span class="info">Skill#3</span><br>
+                            </div>
+                            <div class="col-6">
+                                <span id="skillOne"></span>
+                                <span class="ms-3" id="skillExperienceOne"></span><br>
+                                <span id="skillTwo"></span>
+                                <span class="ms-3" id="skillExperienceTwo"></span><br>
+                                <span id="skillThree"></span>
+                                <span class="ms-3" id="skillExperienceThree"></span><br>
+                            </div>
+                        </div>
+
+                        <!--Job Preferences-->
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <h5 class="text-start">Job Preferences</h5>
+                            </div>
+                            <div class="col-5">
+                                <h6 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#JobPreference">Edit</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6 text-end">
+                                <span class="info">Work style</span><br>
+                                <span class="info">Employement status</span><br>
+                                <span class="info">Job search status</span><br>
+                                <span class="info">Notice period</span><br>
+                            </div>
+                            <div class="col-6">
+                                <span id="workStyle"></span><br>
+                                <span id="isEmployed"></span><br>
+                                <span id="jobSearchStatus"></span><br>
+                                <span id="noticePeriod"></span><br>
+                            </div>
+                        </div>
+
+                        <!--Salary Expectation-->
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <h5 class="text-start">Salary Expectations</h5>
+                            </div>
+                            <div class="col-5">
+                                <h6 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SalaryExpectation">Edit</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-2 mb-4">
+                            <div class="col-6 text-end">
+                                <span class="info">Amount</span><br>
+                                <span class="info">Pay Frequency</span><br>
+                            </div>
+                            <div class="col-6">
+                                <span id="salary"></span><br>
+                                <span id="payment"></span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <!--RESUME-->
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="row">
+                            <div class="col-8 ms-5">
+                                <h5>Resume</h5>
+                                <p id="resume"></p>
+                                <button class="btn btn-primary" id="viewPdfButton">Open</button>
+                                <button class="btn btn-primary" id="viewPdfButton"data-bs-toggle="modal" data-bs-target="#Resume">Upload New</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </section>
+
+        <section>
+            <!-- General Information -->
+            <div class="modal fade" id="GeneralInformation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="GeneralInformationLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="GeneralInformationLabel">General Information</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" class="GeneralInformation"> <!-- Form element outside modal-body -->
+                            <div class="modal-body">
+                                <div class="alert alert-success mt-2" id="alert"> <!---->
+                                    <strong>Response Type !</strong> Message
+                                </div>
+                                <div class="form-group">
+                                    <label for="Phone" class="form-label"><b>Phone Number</b></label>
+                                    <input class="form-control" type="text" id="Phone" name="Phone">
+                                    <h6 class="error-message" id="Phone-error"></h6>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location" class="form-label"><b>Location</b></label>
+                                    <input class="form-control" type="text" id="location" name="location">
+                                    <h6 class="error-message" id="location-error"></h6>
+                                </div>
+                                <div class="form-group">
+                                    <label for="primaryRole" class="form-label"><b>Primary role</b></label>
+                                    <input class="form-control" type="text" id="primaryRole" name="primaryRole">
+                                    <h6 class="error-message" id="primaryRole-error"></h6>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location" class="form-label"><b>Roles Open to</b></label>
+                                    <input class="form-control" type="text" id="rolesOpenTo" name="rolesOpenTo">
+                                    <h6 class="error-message" id="rolesOpenTo-error"></h6>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio" class="form-label"><b>Bio</b></label>
+                                    <textarea class="form-control" id="bio" rows="3" name="bio"></textarea>
+                                    <h6 class="error-message" id="bio-error"></h6>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form> <!-- Closing form tag -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section>
+            <!-- Skill Informaion -->
+            <div class="modal fade" id="Skills" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Skills" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Skills">Skills</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" class="SkillInformation"> <!-- Form element outside modal-body -->
+                            <div class="modal-body">
+                                <div class="alert alert-success mt-2" id="alert"> <!---->
+                                    <strong>Response Type !</strong> Message
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <input class="form-control" type="text" id="skOne" name="skOne" required>
+                                        <h6 class="error-message" id="skOne-error"></h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" id="skExpOne" name="skExpOne">
+                                            <option value="Less than 1">Less than 1</option>
+                                            <option value="2 years">2 years</option>
+                                            <option value="More than 3 years">More than 3 years</option> 
+                                        </select>
+                                    </div>        
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <input class="form-control" type="text" id="skTwo" name="skTwo" required>
+                                        <h6 class="error-message" id="skTwo-error"></h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" id="skExpTwo" name="skExpTwo">
+                                            <option value="Less than 1">Less than 1</option>
+                                            <option value="2 years">2 years</option>
+                                            <option value="More than 3 years">More than 3 years</option>  
+                                        </select>
+                                    </div>        
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <input class="form-control" type="text" id="skThree" name="skThree" required>
+                                        <h6 class="error-message" id="skThree-error"></h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select" id="skExpThree" name="skExpThree">
+                                            <option value="Less than 1">Less than 1</option>
+                                            <option value="2 years">2 years</option>
+                                            <option value="More than 3 years">More than 3 years</option>  
+                                        </select>
+                                    </div>        
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form> <!-- Closing form tag -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+            <!-- Job Preference -->
+            <div class="modal fade" id="JobPreference" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="JobPreference" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="JobPreference">Job Preference</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" class="JobPreference"> <!-- Form element outside modal-body -->
+                            <div class="modal-body">
+                                <div class="alert alert-success mt-2" id="alert"> <!---->
+                                    <strong>Response Type !</strong> Message
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="form-label"><b>Prefered work style</b></label>
+                                    <select class="form-select" id="WorkStyle" name="WorkStyle">
+                                        <option value="In-Office">In-Office</option>
+                                        <option value="Flexible">Flexible</option>
+                                        <option value="Remote Only">Remote Only</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="form-label"><b>Are you currently Employed</b></label>
+                                    <select class="form-select" id="IsEmployed" name="IsEmployed">
+                                        <option value="Employed">Yes</option>
+                                        <option value="Not Employed">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="form-label"><b>Where are you on your job search?</b></label>
+                                    <select class="form-select" id="JobSearch" name="JobSearch">
+                                        <option value="Active">I'm Actively Looking</option>
+                                        <option value="Casually Browsing">Casually Browsing</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="" class="form-label"><b>If you are asked to join by a company, when can you start?</b></label>
+                                    <select class="form-select" id="NoticePeriod" name="NoticePeriod">
+                                        <option value="Immediately">Immediately</option>
+                                        <option value="1 Weeks">1 Weeks</option>
+                                        <option value="2 Weeks">2 Weeks</option>
+                                        <option value="Within a Month">Within a Month</option>
+                                        <option value="Within 2 Months">Within 2 Months</option>
+                                    </select>
+                                </div>
+                                
+                             
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form> <!-- Closing form tag -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         
+        <section>
+            <!-- Salary Expecation -->
+            <div class="modal fade" id="SalaryExpectation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="SalaryExpectation" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="SalaryExpectation">Salary Expecation</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" class="SalaryExpectation"> <!-- Form element outside modal-body -->
+                            <div class="modal-body">
+                                <div class="alert alert-success mt-2" id="alert"> <!---->
+                                    <strong>Response Type !</strong> Message
+                                </div>
+                                <div class="form-group">
+                                    <label for="Salary" class="form-label"><b>Salary</b></label>
+                                    <input class="form-control" type="number" id="Salary" name="Salary" required>
+                                    <h6 class="error-message" id="Salary-error"></h6>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label class="form-label" for="paymentType"><b>Salary</b></label>
+                                    <select class="form-select" id="PaidEvery" name="PaidEvery">
+                                        <option value="Hour">Hour</option>
+                                        <option value="Day">Day</option>
+                                        <option value="Week">Week</option>
+                                        <option value="2 Weeks">2 Weeks</option>
+                                        <option value="Month">Month</option>   
+                                    </select> 
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form> <!-- Closing form tag -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- Resume -->
+            <div class="modal fade" id="Resume" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Resume" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Resume">Resume</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="" class="UserResumeForm" enctype="multipart/form-data"> <!-- Form element outside modal-body -->
+                            <div class="modal-body">
+                                <div class="alert alert-success mt-2" id="alert"> <!---->
+                                    <strong>Response Type !</strong> Message
+                                </div>
+                                <div class="form-group">
+                                    <label for="resume" class="form-label"><b>Upload your cv in a PDF format</b></label>
+                                    <input class="form-control" type="file" id="UserResume" accept=".pdf" name="userResume" required>
+                                    <h6 class="error-message" id="UserResume-error"></h6>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form> <!-- Closing form tag -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../JavaScript/Candidate-Resume.js"></script>
+    <script src="../JavaScript/Candidate-Salary.js"></script>
+    <script src="../JavaScript/Candidate-Job-Preference.js"></script>
+    <script src="../JavaScript/Candidate-Skills.js"></script>
+    <script src="../JavaScript/Candidate-General-Info.js"></script>
+    <script src="../JavaScript/Sign-Out.js"></script>
+    <script src="../JavaScript/Candidate-Profile.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
