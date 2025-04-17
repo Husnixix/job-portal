@@ -1,31 +1,22 @@
----Project Name :- STAPH
+# STAPH – Job Portal System
 
-#### Recruitment Platform
--- A comprehensive job portal where employers can post jobs, manage applications, and send automated emails. Candidates can create profiles, upload resumes, apply for jobs, and track their applications. Admins have full control over job postings and user management.
+**2nd Year – Final Project**
 
-#### Admin Features
-- Login
-- Manage Jobs, Manage Users
+## Overview
+STAPH is a job portal where users can search and apply for jobs. Employers can post jobs and manage applications. Admins can manage users and job listings.
 
-#### Candidate Features
-- Register
-- Login
-- Create Profile
-- Apply Jobs
-- Track Job Applications
+## User Roles
 
-#### Employee Features
-- Register
-- Login
-- Manage Job Posts
-- Manage Job Applications
-- Send Automated Email
+### Candidate
+- Search and apply for jobs
+- Track application status
+- View interview schedules
 
-##### Technoglogies Used
-- PHP
-- MySQL
-- JavaScript
-- EmailJS
-- HTML/CSS
+### Employer
+- Post job openings
+- Manage job applications
+- Schedule interviews
 
-
+### Admin
+- Manage users
+- Manage job postings
